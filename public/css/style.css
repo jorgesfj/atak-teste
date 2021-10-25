@@ -1,0 +1,20 @@
+.alerta {
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.error {
+    border-color: #e8273b;
+    color: #FFF;
+    background-color: #ed5565;
+}
+
+img, p {
+    display: inline-block;
+    margin-right: 6px;
+    float: left;
+}

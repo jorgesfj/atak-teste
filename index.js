@@ -1,17 +1,16 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
-const {bodyParser} = require("express");
-const port = 8080;
 const routes = require("./routes/routes");
 
-app.use(express.json);
-app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static('public'));
+
+app.set('view engine', 'ejs');
 
 app.use('/api', routes.routes);
 
-
-
-
-app.listen(port, () => {
-    console.log("Server running in port: " + port);
-});
+app.listen(5500, () => {
+  console.log(`O servidor está rodando na porta 5500`)
+})
